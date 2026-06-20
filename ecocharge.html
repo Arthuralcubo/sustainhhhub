@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoCharge | SustainHub</title>
+
+```
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+    .page-hero{
+        min-height:60vh;
+        background:linear-gradient(135deg,#16a34a,#0ea5e9);
+        color:white;
+
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        text-align:center;
+
+        padding:100px 20px;
+    }
+
+    .page-hero h1{
+        font-size:4rem;
+        margin-bottom:20px;
+    }
+
+    .page-section{
+        padding:100px 10%;
+    }
+
+    .eco-grid{
+
+        display:grid;
+
+        grid-template-columns:
+        repeat(auto-fit,minmax(350px,1fr));
+
+        gap:40px;
+
+        margin-top:50px;
+    }
+
+    .card{
+
+        background:white;
+
+        padding:30px;
+
+        border-radius:20px;
+
+        box-shadow:
+        0 10px 25px rgba(0,0,0,.08);
+    }
+
+    .calculator{
+
+        background:#f8fafc;
+
+        padding:30px;
+
+        border-radius:20px;
+    }
+
+    .calculator input{
+
+        width:100%;
+
+        padding:12px;
+
+        margin-top:10px;
+        margin-bottom:20px;
+
+        border:1px solid #cbd5e1;
+
+        border-radius:10px;
+    }
+
+    .calculator button{
+
+        width:100%;
+
+        padding:15px;
+
+        background:#16a34a;
+
+        color:white;
+
+        border:none;
+
+        border-radius:10px;
+
+        cursor:pointer;
+    }
+
+    .results{
+
+        margin-top:25px;
+
+        line-height:2;
+    }
+
+    .benefits{
+
+        display:grid;
+
+        grid-template-columns:
+        repeat(auto-fit,minmax(250px,1fr));
+
+        gap:25px;
+
+        margin-top:40px;
+    }
+
+    .benefit{
+
+        background:#ecfdf5;
+
+        padding:25px;
+
+        border-radius:15px;
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+```
+<div class="logo">
+    🌱 SustainHub
+</div>
+
+<ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="desarrollo.html">Desarrollo Sustentable</a></li>
+    <li><a href="evaluador.html">Evaluador</a></li>
+    <li><a href="ecocharge.html">EcoCharge</a></li>
+    <li><a href="biblioteca.html">Biblioteca</a></li>
+    <li><a href="estadisticas.html">Estadísticas</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+</ul>
+```
+
+</nav>
+
+<section class="page-hero">
+
+```
+<div>
+
+    <h1>⚡ EcoCharge</h1>
+
+    <p>
+        Solución inteligente para eliminar el consumo fantasma de energía.
+    </p>
+
+</div>
+```
+
+</section>
+
+<section class="page-section">
+
+```
+<h2>¿Cuál es el problema?</h2>
+
+<div class="eco-grid">
+
+    <div class="card">
+
+        <h3>Consumo Fantasma</h3>
+
+        <p>
+            Muchos dispositivos continúan consumiendo electricidad aun cuando parecen estar apagados.
+            Televisores, microondas, cargadores, consolas y computadoras generan pérdidas energéticas
+            constantes durante todo el año.
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h3>La Solución</h3>
+
+        <p>
+            EcoCharge utiliza sensores de corriente y control inteligente para detectar cuándo un dispositivo
+            no está siendo utilizado y cortar completamente el suministro eléctrico.
+        </p>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<section class="page-section">
+
+```
+<h2>Calculadora EcoCharge</h2>
+
+<div class="calculator">
+
+    <label>
+        Número de dispositivos conectados:
+    </label>
+
+    <input type="number" id="devices" value="10">
+
+    <label>
+        Consumo fantasma por dispositivo (Watts):
+    </label>
+
+    <input type="number" id="watts" value="5">
+
+    <button onclick="calculateEcoCharge()">
+        Calcular Ahorro
+    </button>
+
+    <div class="results">
+
+        <p>
+            Consumo anual desperdiciado:
+            <strong id="kwhResult">0</strong> kWh
+        </p>
+
+        <p>
+            Costo aproximado:
+            <strong>$<span id="moneyResult">0</span></strong>
+        </p>
+
+        <p>
+            CO₂ generado:
+            <strong id="co2Result">0</strong> kg
+        </p>
+
+    </div>
+
+</div>
+```
+
+</section>
+
+<section class="page-section">
+
+```
+<h2>Beneficios de EcoCharge</h2>
+
+<div class="benefits">
+
+    <div class="benefit">
+        <h3>💰 Ahorro Económico</h3>
+        <p>Reduce el gasto eléctrico anual.</p>
+    </div>
+
+    <div class="benefit">
+        <h3>🌱 Menor Impacto Ambiental</h3>
+        <p>Reduce emisiones indirectas de CO₂.</p>
+    </div>
+
+    <div class="benefit">
+        <h3>⚡ Eficiencia Energética</h3>
+        <p>Optimiza el uso de la energía disponible.</p>
+    </div>
+
+    <div class="benefit">
+        <h3>🏠 Fácil Implementación</h3>
+        <p>Puede adaptarse a viviendas y oficinas.</p>
+    </div>
+
+</div>
+```
+
+</section>
+
+<script>
+
+function calculateEcoCharge(){
+
+    let devices =
+    Number(document.getElementById("devices").value);
+
+    let watts =
+    Number(document.getElementById("watts").value);
+
+    let annualKwh =
+    (devices * watts * 24 * 365) / 1000;
+
+    let annualCost =
+    annualKwh * 2.5;
+
+    let annualCo2 =
+    annualKwh * 0.4;
+
+    document.getElementById("kwhResult")
+    .innerText = annualKwh.toFixed(2);
+
+    document.getElementById("moneyResult")
+    .innerText = annualCost.toFixed(2);
+
+    document.getElementById("co2Result")
+    .innerText = annualCo2.toFixed(2);
+}
+
+</script>
+
+</body>
+</html>
